@@ -19,12 +19,15 @@ describe("sum", () => {
     expect(window.sum(2, 3)).toBe(5);
   });
 
-  it("adds negative numbers and positive numbers", () => {
+  it("adds negative numbers", () => {
     expect(window.sum(-1, 1)).toBe(0);
+    expect(window.sum(-2, -3)).toBe(-5);
   });
 
-  it("returns 0 when both are 0", () => {
+  it("handles zero correctly", () => {
     expect(window.sum(0, 0)).toBe(0);
+    expect(window.sum(5, 0)).toBe(5);
+    expect(window.sum(0, 5)).toBe(5);
   });
 });
 

@@ -11,7 +11,7 @@ module.exports = {
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
   ],
-  ignorePatterns: ["node_modules/", "sum.js"],
+  ignorePatterns: ["node_modules/", "*.js"],
   rules: {
     "@typescript-eslint/no-non-null-assertion": "off",
   },
@@ -19,6 +19,10 @@ module.exports = {
     {
       files: ["*.test.ts"],
       env: { jest: true },
+    },
+    {
+      files: ["*.cjs"],
+      env: { node: true },
     },
   ],
 };
